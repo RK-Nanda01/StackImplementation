@@ -25,6 +25,29 @@ namespace MyStack
             this.top = node;
             Console.WriteLine($"New Node Added {data}");
         }
+        public int Peek()
+        {
+            return this.top.data;
+        }
+
+        public void Pop()
+        {
+            
+
+            if (this.top == null)
+            {
+                Console.WriteLine($"Stack Already Empty");
+                return;
+            }
+
+            else
+            {
+                Console.WriteLine($"Element {top.data} popped ");
+                top = top.next;
+                return;
+
+            }
+        }
 
         public void DisplayStack()
         {
