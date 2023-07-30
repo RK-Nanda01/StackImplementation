@@ -31,6 +31,18 @@ namespace MyStack
             
             Console.WriteLine($"New Node Added {data}");
         }
+        public void Dequeue()
+        {
+            if(this.front == null)
+            {
+                Console.WriteLine($"Queue Already Empty");
+            }
+            else
+            {
+                Console.WriteLine($"{front.data} Popped from Queue");
+                front = front.next;
+            }
+        }
         public void DisplayQueue()
         {
             Node temp = this.front;
